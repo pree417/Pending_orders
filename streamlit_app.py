@@ -10,7 +10,7 @@ st.write(
 )
 
 
-cnx = st.connection("snowflake")
+cnx = st.connection("Snowflake")
 session =cnx.session()
 my_dataframe = session.table("smoothies.public.orders").filter(col("ORDER_FILLED")==0).collect()
 if my_dataframe:
